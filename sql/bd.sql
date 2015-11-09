@@ -32,35 +32,11 @@ create table if not exists tb_volume_author(
 
 
 
-    	<tr>
-    		<td>Breve Descrição</td>
-    		<td><jsp:getProperty name="volume" property="volume.description" /></td>
-    	</tr>
-    	
-    	<tr>
-    		<td>Tipo</td>
-    		<td><jsp:getProperty name="volume" property="volume.type" /></td>
-    	</tr>
-    	
-    	<tr>
-    		<td>Editora</td>
-    		<td><jsp:getProperty name="volume" property="volume.publisher" /></td>
-    	</tr>
-    	
-    	<tr>
-    		<td>Ano de Publicação</td>
-    		<td><jsp:getProperty name="volume" property="volume.publicationYear" /></td>
-    	</tr>
-    	
-    	<tr>
-    		<td>Número de Páginas</td>
-    		<td><jsp:getProperty name="volume" property="volume.numberOfPages" /></td>
-    	</tr>
     	
     	<tr>
     		<td>Autores</td>
     		<td>
-    			<c:forEach items="${volume.authors}" var="author">  
+    			<c:forEach items="<%= ((Volume)request.getAttribute("volume")).getAuthors() %>" var="author">  
 				    ${author}<br>
 				</c:forEach>
 			</td>

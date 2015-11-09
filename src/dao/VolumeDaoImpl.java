@@ -112,6 +112,7 @@ public class VolumeDaoImpl implements Dao<Volume> {
 			volume.setDescription(resultSet.getString("description"));
 			volume.setIdVolume(resultSet.getInt("id_volume"));
 			volume.setPublicationYear(resultSet.getInt("publication_year"));
+			volume.setNumberOfPages(resultSet.getInt("pages"));
 			volume.setPublisher(resultSet.getString("publisher"));
 			volume.setType(resultSet.getString("type"));
 		}

@@ -35,6 +35,7 @@ public class SearchServlet extends HttpServlet {
 				// TODO
 			} else {
 				RequestDispatcher dispatcher = request.getRequestDispatcher("webapp/result.jsp");
+				request.setAttribute("volume", volume);
 				dispatcher.forward(request, response);
 			}
 		} catch (ClassNotFoundException | SQLException e) {
