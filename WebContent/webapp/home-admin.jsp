@@ -1,57 +1,137 @@
-<%@page import="dao.VolumeDaoImpl"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/materialize.css" />
-<title>Insert title here</title>
-</head>
-<body>
-	<nav class="blue-grey lighten-1">
-	<div class="navbar-fixed">
-		<a href="#" class="brand-logo right">MyLibrary</a> <a href="#"
-			class="brand-logo left"><%=session.getAttribute("username")%></a>
-	</div>
-	</nav>
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/materialize.css" />
 
-	<div class="container">
-		<form action="../VolumeServlet" method="POST">
-			<label>Título do Volume</label> <input type="text" name="title" /> <br />
+		<title>My Library</title>
+	</head>
+	
+	<body>
+		<!-- Nav -->
+		<nav class="blue-grey lighten-1">
+			<div class="navbar-fixed">
+				<a href="#" class="brand-logo right">MyLibrary</a>
+			</div>
+		</nav>
 
-			<label>Breve Descrição</label>
-			<textarea name="description"> </textarea>
-			<br /> <label>Tipo</label> <input type="text" name="type" /> <br />
-
-			<label>Editora</label> <input type="text" name="publisher" /> <br />
-
-			<label>Número de Páginas</label> <input type="text" name="pages" />
-			<br /> <label>Ano de Publicação</label> <input type="text"
-				name="publication_year" /> <br /> <label>Autores
-				(Separados por Ponto e Vírgula ';')</label> <input type="text"
-				name="authors" /> <br />
-
-			<button class="blue-grey darken-1 waves-effect waves-light btn-large">Cadastrar</button>
-		</form>
-	</div>
-	<div class="page content">
-		<div class="container">
-			<form action="../VolumeServlet" method="GET">
-				<label>Título do Volume</label> <input type="text" name="title" />
-				<br />
-
-				<button
-					class="blue-grey darken-1 waves-effect waves-light btn-large"
-					type="submit">Remover</button>
-			</form>
+		<!-- Content -->
+		<div class="container center">
+			<br /> <br /> <br />
+			
+			<div class="row">
+				<div class="col s6">
+					<a href="#form_new_volume" class="modal-trigger blue-grey darken-1 waves-effect waves-light btn-large">
+						Cadastrar Volume
+					</a>
+				</div>
+	
+				<div class="col s6">
+					<a href="#form_remove_volume" class="modal-trigger blue-grey darken-1 waves-effect waves-light btn-large">
+						Remover Volume
+					</a>
+				</div>
+			</div>
+			
+			<!-- Modal Form New Volume -->
+			<div id="form_new_volume" class="modal">
+				<div class="modal-content">
+					<h4>Cadastrar Volume</h4>		
+					<div class="row">
+						<form class="col s12" action="${pageContext.request.contextPath}/VolumeServlet" method="POST">
+							<div class="row">
+								<div class="input-field col s4">
+									<label>Título do Volume</label> 
+									<input type="text" name="title" />
+								</div>
+								
+								<div class="input-field col s4">
+									<label>Editora</label> 
+									<input type="text" name="publisher" />
+								</div>
+								
+								<div class="input-field col s4">
+									<label>Tipo</label> 
+									<input type="text" name="type" />
+								</div> 
+							</div>
+							
+							<div class="row">
+								<div class="input-field col s9">
+									<label>Breve Descrição</label>
+									<input type="text" name="description" />
+								</div>
+								
+								<div class="input-field col s3">
+									<label>Ano de Publicação</label> 
+									<input type="text" name="publication_year" />
+								</div>
+							</div>
+							
+							<div class="row">																
+								<div class="input-field col s6">
+									<label>Autores (Separados por Ponto e Vírgula ";")</label>
+									<input type="text" name="authors" />
+								</div>
+								
+								<div class="input-field col s3">
+									<label>Número de Páginas</label> 
+									<input type="text" name="pages" />
+								</div> 
+								
+								<div class="right-align col s3">
+									<button class="blue-grey darken-1 waves-effect waves-light btn-large"
+										type="submit">Cadastrar</button>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Modal Form Remove Volume -->
+			<div id="form_remove_volume" class="modal">
+				<div class="modal-content">
+					<h4>Buscar Volume</h4>		
+					<div class="row">
+						<form class="col s12" action="${pageContext.request.contextPath}/SearchServlet" method="GET">
+							<div class="input-field col s12">
+								<label>Título do Volume</label> 
+								<input class="validate" type="text" name="title" /> <br />
+							</div> 
+				
+							<div class="right-align">
+								<button class="blue-grey darken-1 waves-effect waves-light btn-large"
+									type="submit">Buscar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			
 		</div>
-	</div>
-	<footer class="page-footer blue-grey lighten-1">
-	<div class="footer-copyright">
-		<div class="container">ForCode SA © 2015</div>
-	</div>
-	</footer>
-</body>
-</html>	
+	
+		<!-- Footer -->
+		<footer class="fixed-bottom page-footer blue-grey lighten-1">
+			<div class="footer-copyright">
+				<div class="container">ForCode SA © 2015</div>
+			</div>
+		</footer>
+		
+		<!--  Scripts-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="${pageContext.request.contextPath}/resources/js/materialize.js"></script>
+		<script> 
+			$(document).ready(function(){
+		   		 $('.modal-trigger').leanModal();
+		  	});
+		</script>
+ 
+	</body>
+</html>
