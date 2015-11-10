@@ -30,14 +30,22 @@ public class SearchServlet extends HttpServlet {
 
 		try {
 			volume = volumeDaoImpl.searchByTitle(title);
+			RequestDispatcher dispatcher;
 			
 			if (volume == null) {
-				// TODO
+				
+				if(request.getSession().getAttribute("username") == null)
+					dispatcher = request.getRequestDispatcher("webapp/index.jsp");
+				else
+					dispatcher = request.getRequestDispatcher("webapp/home-admin.jsp");
+				
+				request.setAttribute("error-search", "Volume não encontrado");
+			
 			} else {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("webapp/result.jsp");
+				dispatcher = request.getRequestDispatcher("webapp/result.jsp");
 				request.setAttribute("volume", volume);
-				dispatcher.forward(request, response);
 			}
+			dispatcher.forward(request, response);
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

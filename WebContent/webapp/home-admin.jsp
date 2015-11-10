@@ -6,7 +6,23 @@
 	
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		
+		<script language = "javascript">
+			<%= request.getAttribute("error-search") == null ? "" : "window.alert(\"" + ((String)request.getAttribute("error-search")) + "\");"%>
+			
+			function isok(){
+				if(isNaN(parseInt(document.getElementsByName("publication_year")[0].value))){
+					alert("Preencha o ano de publicação com números!");
+					document.form_volume.publication_year.focus();
+					return false;
+				}
+				if(isNaN(parseInt(document.getElementsByName("pages")[0].value))){
+					alert("Preencha a quantidade de páginas com números!");
+					document.form_volume.pages.focus();
+					return false;
+				}
+				return true;
+			}
+		</script>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/materialize.css" />
 
 		<title>My Library</title>
@@ -43,7 +59,7 @@
 				<div class="modal-content">
 					<h4>Cadastrar Volume</h4>		
 					<div class="row">
-						<form class="col s12" action="${pageContext.request.contextPath}/VolumeServlet" method="POST">
+						<form class="col s12" action="${pageContext.request.contextPath}/VolumeServlet" method="POST" onSubmit="return isok();" name = "form_volume">
 							<div class="row">
 								<div class="input-field col s4">
 									<label>Título do Volume</label> 

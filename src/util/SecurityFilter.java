@@ -27,9 +27,11 @@ public class SecurityFilter implements Filter{
 		
 		HttpSession session = ((HttpServletRequest) request).getSession();
 		Administrator admin = (Administrator) session.getAttribute("username");
+		
 		if(admin == null){
 			request.setAttribute("mensagem", "Você não está autorizado a vizualizar esta página");
 			((HttpServletResponse)response).sendRedirect("webapp/index.jsp");
+			
 		}else{
 			chain.doFilter(request, response);
 		}

@@ -3,6 +3,7 @@ package bean;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,9 +38,17 @@ public class LoginServlet extends HttpServlet {
 		
 		try{
 			admin = administratorDaoImpl.searchByName(username);
-			if(admin.getPassword().equals(password)){
+			if(admin != null && admin.getPassword().equals(password)){
 				session.setAttribute("username", admin.getName());
 				response.sendRedirect("webapp/home-admin.jsp");
+			}else{
+				if(admin == null)
+					request.setAttribute("error", "Nome de usuário inválido");
+				else
+					request.setAttribute("error", "Senha incorreta");
+				
+				RequestDispatcher dispatcher = request.getRequestDispatcher("webapp/index.jsp");
+				dispatcher.forward(request, response);
 			}
 		}catch(SQLException | ClassNotFoundException exp){
 			
