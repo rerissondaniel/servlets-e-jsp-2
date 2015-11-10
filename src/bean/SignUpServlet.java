@@ -36,10 +36,12 @@ public class SignUpServlet extends HttpServlet {
 			admin.setName(username);
 			admin.setPassword(password);			
 			
+			System.out.println(admin.toString());
+			
 			try {
 				if(administratorDaoImpl.searchByName(username) == null){
 					administratorDaoImpl.insert(admin);
-					response.sendRedirect("webapp/login.jsp");
+					response.sendRedirect("webapp/index.jsp");
 				}else{
 					//TODO treta
 				}

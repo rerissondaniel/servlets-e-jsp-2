@@ -16,7 +16,11 @@
 		<!-- Nav -->
 		<nav class="blue-grey lighten-1">
 			<div class="navbar-fixed">
-				<a href="#" class="brand-logo right">MyLibrary</a>
+				<div class="row">
+					<div class="col s12">
+						<a href="#" class="brand-logo left">MyLibrary</a>
+					</div>
+				</div>
 			</div>
 		</nav>
 
@@ -43,20 +47,67 @@
 				<div class="modal-content">
 					<h4>Login</h4>		
 					<div class="row">
-						<form class="col s12" action="${pageContext.request.contextPath}/LoginServlet" method="POST">
-							<div class="input-field col s12">
-								<label>Nome</label> 
-								<input class="validate" type="text" name="username" /> <br />
-							</div> 
-							
-							<div class="input-field col s12">
-								<label>Senha</label>
-								<input class="validate" type="password" name="password" /> <br />
+						<form class="col s12" action="${pageContext.request.contextPath}/AdminServlet" method="POST">
+							<div class="row">
+								<div class="input-field col s12">
+									<label>Nome</label> 
+									<input class="validate" type="text" name="username" /> <br />
+								</div> 
 							</div>
-				
-							<div class="right-align">
-								<button class="blue-grey darken-1 waves-effect waves-light btn-large"
-									type="submit">Logar</button>
+							
+							<div class="row">
+								<div class="input-field col s12">
+									<label>Senha</label>
+									<input class="validate" type="password" name="password" /> <br />
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="left-align col s6">
+									<a href="#form_signup" class="modal-trigger">
+										Cadastrar Administrador
+									</a>
+								</div>
+								<div class="right-align col s6">
+									<button class="blue-grey darken-1 waves-effect waves-light btn-large"
+										type="submit">Logar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Modal Form Sign Up -->
+			<div id="form_signup" class="modal">
+				<div class="modal-content">
+					<h4>Cadastrar Administrador</h4>		
+					<div class="row">						
+						<form class="col s12" action="${pageContext.request.contextPath}/SignUpServlet" method="POST">
+							<div class="row">
+								<div class="input-field col s12">
+									<label>Nome</label> 
+									<input type="text" name="username" />
+								</div>
+							</div>
+							
+							<div class="row"> 
+								<div class="input-field col s6">
+									<label>Senha</label>
+									<input type="password" name="password" />
+								</div>
+								
+								<div class="input-field col s6">
+									<label>Redigite a Senha</label> 
+									<input type="password" name="retype-password" />
+								</div>
+							</div>
+					
+							<div class="row">
+								<div class="right-align col s12">
+									<button class="blue-grey darken-1 waves-effect waves-light btn-large"
+										type="submit">Cadastrar</button>
+								</div>
 							</div>
 						</form>
 					</div>
@@ -69,12 +120,14 @@
 					<h4>Buscar Volume</h4>		
 					<div class="row">
 						<form class="col s12" action="${pageContext.request.contextPath}/SearchServlet" method="GET">
-							<div class="input-field col s12">
-								<label>Título do Volume</label> 
-								<input class="validate" type="text" name="title" /> <br />
-							</div> 
-				
-							<div class="right-align">
+							<div class="row">
+								<div class="input-field col s12">
+									<label>Título do Volume</label> 
+									<input type="text" name="title" />
+								</div>
+							</div>
+							
+							<div>
 								<button class="blue-grey darken-1 waves-effect waves-light btn-large"
 									type="submit">Buscar</button>
 							</div>
@@ -82,8 +135,8 @@
 					</div>
 				</div>
 			</div>
-			
 		</div>
+
 	
 		<!-- Footer -->
 		<footer class="fixed-bottom page-footer blue-grey lighten-1">

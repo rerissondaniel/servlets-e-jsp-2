@@ -16,8 +16,8 @@ import dao.AdministratorDaoImpl;
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet("/LoginServlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/AdminServlet")
+public class AdminServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -46,5 +46,19 @@ public class LoginServlet extends HttpServlet {
 		}
 		
 	}
-
+	
+	/**
+	 * @throws IOException 
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+		request.getSession().invalidate();
+		
+		try {
+			response.sendRedirect("webapp/index.jsp");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

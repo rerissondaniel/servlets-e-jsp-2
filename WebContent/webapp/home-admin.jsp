@@ -6,9 +6,8 @@
 	
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/materialize.css" />
-
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<title>My Library</title>
 	</head>
 	
@@ -16,7 +15,17 @@
 		<!-- Nav -->
 		<nav class="blue-grey lighten-1">
 			<div class="navbar-fixed">
-				<a href="#" class="brand-logo right">MyLibrary</a>
+				<div class="row">
+					<div class="col s6">
+						<a href="#" class="brand-logo left">MyLibrary</a>
+					</div>						
+					<div class="right-align col s12">
+						<form action="${pageContext.request.contextPath}/AdminServlet" method="GET">
+							<button class="blue-grey darken-1 waves-effect waves-light btn-large"
+									type="submit"><i class="large material-icons"> power_settings_new</i></button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</nav>
 
@@ -98,23 +107,26 @@
 			<!-- Modal Form Remove Volume -->
 			<div id="form_remove_volume" class="modal">
 				<div class="modal-content">
-					<h4>Buscar Volume</h4>		
+					<h4>Remover Volume</h4>		
 					<div class="row">
-						<form class="col s12" action="${pageContext.request.contextPath}/SearchServlet" method="GET">
-							<div class="input-field col s12">
-								<label>Título do Volume</label> 
-								<input class="validate" type="text" name="title" /> <br />
-							</div> 
-				
-							<div class="right-align">
-								<button class="blue-grey darken-1 waves-effect waves-light btn-large"
-									type="submit">Buscar</button>
+						<form class="col s12" action="${pageContext.request.contextPath}/VolumeServlet" method="GET">
+							<div class="row">
+								<div class="input-field col s12">
+									<label>Título do Volume</label> 
+									<input class="validate" type="text" name="title" /> <br />
+								</div> 
+							</div>
+							
+							<div class="row">
+								<div class="right-align col s12">
+									<button class="blue-grey darken-1 waves-effect waves-light btn-large"
+										type="submit">Remover Volume</button>
+								</div>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
-			
 		</div>
 	
 		<!-- Footer -->
