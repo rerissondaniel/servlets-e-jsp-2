@@ -29,15 +29,3 @@ create table if not exists tb_volume_author(
 
 	primary key (id_volume, author_name)
 );
-
-
-
-    	
-    	<tr>
-    		<td>Autores</td>
-    		<td>
-    			<c:forEach items="<%= ((Volume)request.getAttribute("volume")).getAuthors() %>" var="author">  
-				    ${author}<br>
-				</c:forEach>
-			</td>
-    	</tr>
