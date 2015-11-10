@@ -4,19 +4,33 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/materialize.css" />
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="../LoginServlet" method="POST">
-		<label>Nome</label> 
-		<input type="text" name="username" /> <br /> 
-		
-		<label>Senha</label>
-		<input type="password" name="password" /> <br />
+	<nav class="blue-grey lighten-1">
+	<div class="navbar-fixed">
+		<a href="#" class="brand-logo right">MyLibrary</a>
+	</div>
+	</nav>
+	<div class="container">
+		<br/><br/>
+		<form action="../LoginServlet" method="POST">
+			<label>Nome</label> 
+			<input type="text" name="username" /> <br /> <label>Senha</label>
+			<input type="password" name="password" /> <br />
 
-		<button type="submit">Logar</button>
-		
-		<a href="signup.jsp">Cadastrar Administrador</a>
-	</form>
+			<div class="right-align">
+				<button class="blue-grey darken-1 waves-effect waves-light btn-large"
+					type="submit">Logar</button>
+			</div>
+		</form>
+	</div>
+	<footer class="fixed-bottom page-footer blue-grey lighten-1">
+	<div class="footer-copyright">
+		<div class="container">ForCode SA © 2015</div>
+	</div>
+	</footer>
 </body>
 </html>
