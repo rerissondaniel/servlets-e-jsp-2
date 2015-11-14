@@ -43,7 +43,7 @@ public class LoginServlet extends HttpServlet {
 				response.sendRedirect("webapp/home-admin.jsp");
 			}else{
 				if(admin == null)
-					request.setAttribute("error", "Nome de usu√°rio inv√°lido");
+					request.setAttribute("error", "Nome de usu·rio inv·lido");
 				else
 					request.setAttribute("error", "Senha incorreta");
 				
@@ -54,6 +54,15 @@ public class LoginServlet extends HttpServlet {
 			
 		}
 		
+	}
+	
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.getSession().invalidate();
+		response.sendRedirect("webapp/index.jsp");
 	}
 
 }

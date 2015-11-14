@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,8 +29,24 @@ public class VolumeServlet extends HttpServlet {
 		VolumeDaoImpl volumeDaoImpl = new VolumeDaoImpl();
 
 		try {
-			volumeDaoImpl.delete(volumeDaoImpl.searchByTitle(title));
-			response.sendRedirect("webapp/home-admin.jsp");
+			Volume volume = volumeDaoImpl.searchByTitle(title);
+			RequestDispatcher dispatcher;
+			
+			if (volume == null) {	
+				if(request.getSession().getAttribute("username") == null)
+					dispatcher = request.getRequestDispatcher("webapp/index.jsp");
+				else
+					dispatcher = request.getRequestDispatcher("webapp/home-admin.jsp");
+				
+				request.setAttribute("error-search", "Volume não encontrado");
+			} else {
+				volumeDaoImpl.delete(volume);
+				dispatcher = request.getRequestDispatcher("webapp/home-admin.jsp");
+				
+				request.setAttribute("error-search", "Volume removido com secesso");
+			}
+			
+			dispatcher.forward(request, response);
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -3,6 +3,7 @@ package bean;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,20 +34,26 @@ public class SignUpServlet extends HttpServlet {
 		AdministratorDaoImpl administratorDaoImpl = new AdministratorDaoImpl();
 		
 		if(password.equals(retypePassword)){
+			
 			admin.setName(username);
 			admin.setPassword(password);			
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("webapp/index.jsp");
 			
 			try {
 				if(administratorDaoImpl.searchByName(username) == null){
 					administratorDaoImpl.insert(admin);
-					response.sendRedirect("webapp/login.jsp");
+					request.getSession().setAttribute("alert", "Usuário Cadastrado com Sucesso");
 				}else{
-					//TODO treta
+					request.getSession().setAttribute("alert", "Nome de Usuário já está em uso");
 				}
+			
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			dispatcher.forward(request, response);
 		}
 	}
 }

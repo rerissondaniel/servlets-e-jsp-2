@@ -27,7 +27,7 @@ public class SecurityFilter implements Filter{
 		String admin = (String) session.getAttribute("username");
 		
 		if(admin == null){
-			request.setAttribute("error", "Voc√™ n√£o est√° autorizado a vizualizar esta p√°gina");
+			request.setAttribute("error", "VocÍ n„o est· autorizado a visualizar esta p·gina");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("webapp/index.jsp");
 			dispatcher.forward(request, response);
 			

@@ -12,11 +12,18 @@
 <title>Insert title here</title>
 </head>
 <body>
+	
+	<!-- Nav -->
 	<nav class="blue-grey lighten-1">
-	<div class="navbar-fixed">
-		<a href="#" class="brand-logo right">MyLibrary</a>
-	</div>
+		<div class="navbar-fixed">
+			<div class="row">
+				<div class="col s12">
+					<a href="#" class="brand-logo left">MyLibrary</a>
+				</div>
+			</div>
+		</div>
 	</nav>
+	
 	<div class="container">
 		<br />
 		<div class="border-grey">

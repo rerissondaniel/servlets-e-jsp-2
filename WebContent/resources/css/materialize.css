@@ -3,10 +3,9 @@
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
- 
 .border-grey {
 	border-radius: 5px;
-    border: 1px solid grey;
+	border: 1px solid grey;
 }
 
 .fixed-bottom {
@@ -2251,9 +2250,27 @@ audio, canvas, progress, video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-audio:not ([controls] ) {
-	display: none;
-	height: 0;
+audio
+:not
+ 
+(
+[
+controls
+]
+ 
+)
+{
+display
+:
+ 
+none
+;
+
+	
+height
+:
+ 
+0;
 }
 
 /**
@@ -2357,8 +2374,21 @@ img {
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-svg:not (:root ) {
-	overflow: hidden;
+svg
+:not
+ 
+(
+:root
+ 
+)
+{
+overflow
+:
+ 
+hidden
+;
+
+
 }
 
 /* Grouping content
@@ -3264,23 +3294,39 @@ nav ul a span.badge {
 60%
 {
 left
+
+
 :
+
  
+
 100%;
 right
+
+
 :
+
  
+
 -90%;
 }
 100%
 {
 left
+
+
 :
+
  
+
 100%;
 right
+
+
 :
+
  
+
 -90%;
 }
 }
@@ -3293,23 +3339,39 @@ right
 60%
 {
 left
+
+
 :
+
  
+
 100%;
 right
+
+
 :
+
  
+
 -90%;
 }
 100%
 {
 left
+
+
 :
+
  
+
 100%;
 right
+
+
 :
+
  
+
 -90%;
 }
 }
@@ -3322,23 +3384,39 @@ keyframes indeterminate { 0% {
 60%
 {
 left
+
+
 :
+
  
+
 100%;
 right
+
+
 :
+
  
+
 -90%;
 }
 100%
 {
 left
+
+
 :
+
  
+
 100%;
 right
+
+
 :
+
  
+
 -90%;
 }
 }
@@ -3351,23 +3429,39 @@ right
 60%
 {
 left
+
+
 :
+
  
+
 107%;
 right
+
+
 :
+
  
+
 -8%;
 }
 100%
 {
 left
+
+
 :
+
  
+
 107%;
 right
+
+
 :
+
  
+
 -8%;
 }
 }
@@ -3380,23 +3474,39 @@ right
 60%
 {
 left
+
+
 :
+
  
+
 107%;
 right
+
+
 :
+
  
+
 -8%;
 }
 100%
 {
 left
+
+
 :
+
  
+
 107%;
 right
+
+
 :
+
  
+
 -8%;
 }
 }
@@ -3409,23 +3519,39 @@ keyframes indeterminate-short { 0% {
 60%
 {
 left
+
+
 :
+
  
+
 107%;
 right
+
+
 :
+
  
+
 -8%;
 }
 100%
 {
 left
+
+
 :
+
  
+
 107%;
 right
+
+
 :
+
  
+
 -8%;
 }
 }
@@ -3668,18 +3794,38 @@ right
 100%
 {
 -webkit-transform
+
+
 :
+
  
+
 rotate
-(359deg);
+
+
+(359
+deg
+);
+
 
     
+
 transform
+
+
 :
+
  
+
 rotate
-(359deg);
+
+
+(359
+deg
+);
+
  
+
 }
 }
 @
@@ -3691,18 +3837,38 @@ keyframes mdi-spin { 0% {
 100%
 {
 -webkit-transform
+
+
 :
+
  
+
 rotate
-(359deg);
+
+
+(359
+deg
+);
+
 
     
+
 transform
+
+
 :
+
  
+
 rotate
-(359deg);
+
+
+(359
+deg
+);
+
  
+
 }
 }
 .mdi-rotate-90 {
@@ -8553,10 +8719,23 @@ a.waves-effect .waves-ripple {
 	will-change: left, top, width, height;
 }
 
-.materialboxed:hover:not (.active ) {
-	opacity: .8;
-}
+.materialboxed
+:hover
+:not
+ 
+(
+.active
+ 
+)
+{
+opacity
+:
+ 
+.8
+;
 
+
+}
 .materialboxed.active {
 	cursor: zoom-out;
 }
@@ -8671,25 +8850,207 @@ input[type=text]:disabled+label, input[type=text][readonly="readonly"]+label,
 	color: rgba(0, 0, 0, 0.26);
 }
 
-input[type=text]:focus:not ([readonly] ), input[type=password]:focus:not
-	([readonly] ), input[type=email]:focus:not ([readonly] ), input[type=url]:focus:not
-	([readonly] ), input[type=time]:focus:not ([readonly] ), input[type=date]:focus:not
-	([readonly] ), input[type=datetime-local]:focus:not ([readonly] ),
-	input[type=tel]:focus:not ([readonly] ), input[type=number]:focus:not ([readonly]
-	), input[type=search]:focus:not ([readonly] ), textarea.materialize-textarea:focus:not
-	([readonly] ) {
-	border-bottom: 1px solid #26a69a;
-	box-shadow: 0 1px 0 0 #26a69a;
-}
+input
+[
+type
+=
+text
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+password
+]
+:focus
+:not
 
+	
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+email
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+url
+]
+:focus
+:not
+
+	
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+time
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+date
+]
+:focus
+:not
+
+	
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+datetime-local
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+tel
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+number
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+
+	
+),
+input
+[
+type
+=
+search
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+ 
+),
+textarea
+.materialize-textarea
+:focus
+:not
+
+	
+(
+[
+readonly
+]
+ 
+)
+{
+border-bottom
+:
+ 
+1
+px
+ 
+solid
+ 
+#26a69a
+;
+
+	
+box-shadow
+:
+ 
+0
+1
+px
+ 
+0
+0
+#26a69a
+;
+
+
+}
 input[type=text]:focus:not ([readonly] ) +label, input[type=password]:focus:not
-	([readonly] ) +label, input[type=email]:focus:not ([readonly] ) +label,
+	 ([readonly] ) +label, input[type=email]:focus:not ([readonly] ) +label,
 	input[type=url]:focus:not ([readonly] ) +label, input[type=time]:focus:not
-	([readonly] ) +label, input[type=date]:focus:not ([readonly] ) +label,
+	 ([readonly] ) +label, input[type=date]:focus:not ([readonly] ) +label,
 	input[type=datetime-local]:focus:not ([readonly] ) +label, input[type=tel]:focus:not
-	([readonly] ) +label, input[type=number]:focus:not ([readonly] ) +label,
+	 ([readonly] ) +label, input[type=number]:focus:not ([readonly] ) +label,
 	input[type=search]:focus:not ([readonly] ) +label, textarea.materialize-textarea:focus:not
-	([readonly] ) +label {
+	 ([readonly] ) +label {
 	color: #26a69a;
 }
 
@@ -8852,7 +9213,7 @@ input[type=text]+label:after, input[type=password]+label:after, input[type=email
 }
 
 .input-field input[type=search]:focus+label i, .input-field input[type=search]:focus 
-	~ .mdi-navigation-close, .input-field input[type=search]:focus ~
+	 ~ .mdi-navigation-close, .input-field input[type=search]:focus ~
 	.material-icons {
 	color: #444;
 }
@@ -8862,7 +9223,7 @@ input[type=text]+label:after, input[type=password]+label:after, input[type=email
 }
 
 .input-field input[type=search] ~ .mdi-navigation-close, .input-field input[type=search] 
-	~ .material-icons {
+	 ~ .material-icons {
 	position: absolute;
 	top: 0;
 	right: 1rem;
@@ -9406,8 +9767,28 @@ select:disabled {
 	color: rgba(0, 0, 0, 0.4);
 }
 
-.select-dropdown li.optgroup ~ li:not (.optgroup ) {
-	padding-left: 1rem;
+.select-dropdown
+ 
+li
+.optgroup
+ 
+~
+li
+:not
+ 
+(
+.optgroup
+ 
+)
+{
+padding-left
+:
+ 
+1
+rem
+;
+
+
 }
 
 /*********************
@@ -9926,45 +10307,99 @@ keyframes container-rotate {to { transform:rotate(360deg);
 25%
 {
 -webkit-transform
+
+
+:
+
+ 
+
+rotate
+
+
+(270
+deg
+);
+
+ 
+
+}
+37
+.5
+ 
+%
+{
+-webkit-transform
 :
  
 rotate
-(270deg);
- 
-}
-37
-.5 % {
-	-webkit-transform: rotate(405deg);
-}
+(405deg);
 
+
+}
 50%
 {
 -webkit-transform
+
+
 :
+
  
+
 rotate
-(540deg);
+
+
+(540
+deg
+);
+
  
+
 }
 62
-.5 % {
-	-webkit-transform: rotate(675deg);
-}
-
-75%
+.5
+ 
+%
 {
 -webkit-transform
 :
  
 rotate
-(810deg);
+(675deg);
+
+
+}
+75%
+{
+-webkit-transform
+
+
+:
+
  
+
+rotate
+
+
+(810
+deg
+);
+
+ 
+
 }
 87
-.5 % {
-	-webkit-transform: rotate(945deg);
-}
+.5
+ 
+%
+{
+-webkit-transform
+:
+ 
+rotate
+(945deg);
 
+
+}
 to {
 	-webkit-transform: rotate(1080deg);
 }
@@ -9986,45 +10421,99 @@ keyframes fill-unfill-rotate {
 25%
 {
 transform
+
+
+:
+
+ 
+
+rotate
+
+
+(270
+deg
+);
+
+ 
+
+}
+37
+.5
+ 
+%
+{
+transform
 :
  
 rotate
-(270deg);
- 
-}
-37
-.5 % {
-	transform: rotate(405deg);
-}
+(405deg);
 
+
+}
 50%
 {
 transform
+
+
 :
+
  
+
 rotate
-(540deg);
+
+
+(540
+deg
+);
+
  
+
 }
 62
-.5 % {
-	transform: rotate(675deg);
-}
-
-75%
+.5
+ 
+%
 {
 transform
 :
  
 rotate
-(810deg);
+(675deg);
+
+
+}
+75%
+{
+transform
+
+
+:
+
  
+
+rotate
+
+
+(810
+deg
+);
+
+ 
+
 }
 87
-.5 % {
-	transform: rotate(945deg);
-}
+.5
+ 
+%
+{
+transform
+:
+ 
+rotate
+(945deg);
 
+
+}
 to {
 	transform: rotate(1080deg);
 }
@@ -10038,36 +10527,56 @@ to {
 25%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 26%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 89%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 90%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 100%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -10079,36 +10588,56 @@ keyframes blue-fade-in-out {from { opacity:1;
 25%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 26%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 89%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 90%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 100%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -10120,29 +10649,45 @@ opacity
 15%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 25%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 50%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 51%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 }
@@ -10154,29 +10699,45 @@ keyframes red-fade-in-out {from { opacity:0;
 15%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 25%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 50%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 51%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 }
@@ -10188,29 +10749,45 @@ opacity
 40%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 50%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 75%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 76%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 }
@@ -10222,29 +10799,45 @@ keyframes yellow-fade-in-out {from { opacity:0;
 40%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 50%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 75%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 76%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 }
@@ -10256,29 +10849,45 @@ opacity
 65%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 75%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 90%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 100%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 }
@@ -10290,29 +10899,45 @@ keyframes green-fade-in-out {from { opacity:0;
 65%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 75%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 90%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 100%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 }
@@ -10398,11 +11023,21 @@ opacity
 50%
 {
 -webkit-transform
+
+
 :
+
  
+
 rotate
-(-5deg);
+
+
+(-5
+deg
+);
+
  
+
 }
 to {
 	-webkit-transform: rotate(130deg);
@@ -10417,11 +11052,21 @@ keyframes left-spin {from { transform:rotate(130deg);
 50%
 {
 transform
+
+
 :
+
  
+
 rotate
-(-5deg);
+
+
+(-5
+deg
+);
+
  
+
 }
 to {
 	transform: rotate(130deg);
@@ -10436,11 +11081,21 @@ to {
 50%
 {
 -webkit-transform
+
+
 :
+
  
+
 rotate
-(5deg);
+
+
+(5
+deg
+);
+
  
+
 }
 to {
 	-webkit-transform: rotate(-130deg);
@@ -10455,11 +11110,21 @@ keyframes right-spin {from { transform:rotate(-130deg);
 50%
 {
 transform
+
+
 :
+
  
+
 rotate
-(5deg);
+
+
+(5
+deg
+);
+
  
+
 }
 to {
 	transform: rotate(-130deg);

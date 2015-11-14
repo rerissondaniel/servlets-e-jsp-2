@@ -2182,11 +2182,27 @@ audio, canvas, progress, video {
 	vertical-align: baseline
 }
 
-audio:not ([controls] ){
-	display: none;
-	height: 0
-}
+audio
+:not
+ 
+(
+[
+controls
+]
+ 
+){
+display
+:
+ 
+none
+;
 
+	
+height
+:
+ 
+0
+}
 [hidden], template {
 	display: none
 }
@@ -2244,10 +2260,20 @@ img {
 	border: 0
 }
 
-svg:not (:root ){
-	overflow: hidden
-}
+svg
+:not
+ 
+(
+:root
+ 
+){
+overflow
+:
+ 
+hidden
 
+
+}
 figure {
 	margin: 1em 40px
 }
@@ -3016,16 +3042,34 @@ nav ul a span.badge {
 
 60%{
 left
+
+
 :
-100%;right
+
+
+100%;
+right
+
+
 :
+
+
 -90%
 }
 100%{
 left
+
+
 :
-100%;right
+
+
+100%;
+right
+
+
 :
+
+
 -90%
 }
 }
@@ -3037,16 +3081,34 @@ left
 
 60%{
 left
+
+
 :
-100%;right
+
+
+100%;
+right
+
+
 :
+
+
 -90%
 }
 100%{
 left
+
+
 :
-100%;right
+
+
+100%;
+right
+
+
 :
+
+
 -90%
 }
 }
@@ -3058,16 +3120,34 @@ keyframes indeterminate { 0%{
 
 60%{
 left
+
+
 :
-100%;right
+
+
+100%;
+right
+
+
 :
+
+
 -90%
 }
 100%{
 left
+
+
 :
-100%;right
+
+
+100%;
+right
+
+
 :
+
+
 -90%
 }
 }
@@ -3079,16 +3159,34 @@ left
 
 60%{
 left
+
+
 :
-107%;right
+
+
+107%;
+right
+
+
 :
+
+
 -8%
 }
 100%{
 left
+
+
 :
-107%;right
+
+
+107%;
+right
+
+
 :
+
+
 -8%
 }
 }
@@ -3100,16 +3198,34 @@ left
 
 60%{
 left
+
+
 :
-107%;right
+
+
+107%;
+right
+
+
 :
+
+
 -8%
 }
 100%{
 left
+
+
 :
-107%;right
+
+
+107%;
+right
+
+
 :
+
+
 -8%
 }
 }
@@ -3121,16 +3237,34 @@ keyframes indeterminate-short { 0%{
 
 60%{
 left
+
+
 :
-107%;right
+
+
+107%;
+right
+
+
 :
+
+
 -8%
 }
 100%{
 left
+
+
 :
-107%;right
+
+
+107%;
+right
+
+
 :
+
+
 -8%
 }
 }
@@ -3367,9 +3501,18 @@ left
 
 100%{
 -webkit-transform
+
+
 :rotate(359deg)
-;transform
+
+
+;
+transform
+
+
 :rotate(359deg)
+
+
 }
 }
 @
@@ -3380,9 +3523,18 @@ keyframes mdi-spin { 0%{
 
 100%{
 -webkit-transform
+
+
 :rotate(359deg)
-;transform
+
+
+;
+transform
+
+
 :rotate(359deg)
+
+
 }
 }
 .mdi-rotate-90 {
@@ -8173,10 +8325,21 @@ a.waves-effect .waves-ripple {
 	will-change: left, top, width, height
 }
 
-.materialboxed:hover:not (.active ){
-	opacity: .8
-}
+.materialboxed
+:hover
+:not
+ 
+(
+.active
+ 
+){
+opacity
+:
+ 
+.8
 
+
+}
 .materialboxed.active {
 	cursor: zoom-out
 }
@@ -8285,25 +8448,205 @@ input[type=text]:disabled+label, input[type=text][readonly="readonly"]+label,
 	color: rgba(0, 0, 0, 0.26)
 }
 
-input[type=text]:focus:not ([readonly] ), input[type=password]:focus:not
-	([readonly] ), input[type=email]:focus:not ([readonly] ), input[type=url]:focus:not
-	([readonly] ), input[type=time]:focus:not ([readonly] ), input[type=date]:focus:not
-	([readonly] ), input[type=datetime-local]:focus:not ([readonly] ),
-	input[type=tel]:focus:not ([readonly] ), input[type=number]:focus:not ([readonly]
-	), input[type=search]:focus:not ([readonly] ), textarea.materialize-textarea:focus:not
-	([readonly] ){
-	border-bottom: 1px solid #26a69a;
-	box-shadow: 0 1px 0 0 #26a69a
-}
+input
+[
+type
+=
+text
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+password
+]
+:focus
+:not
 
+	
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+email
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+url
+]
+:focus
+:not
+
+	
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+time
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+date
+]
+:focus
+:not
+
+	
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+datetime-local
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+tel
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+ 
+),
+input
+[
+type
+=
+number
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+
+	
+),
+input
+[
+type
+=
+search
+]
+:focus
+:not
+ 
+(
+[
+readonly
+]
+ 
+),
+textarea
+.materialize-textarea
+:focus
+:not
+
+	
+(
+[
+readonly
+]
+ 
+){
+border-bottom
+:
+ 
+1
+px
+ 
+solid
+ 
+#26a69a
+;
+
+	
+box-shadow
+:
+ 
+0
+1
+px
+ 
+0
+0
+#26a69a
+
+
+}
 input[type=text]:focus:not ([readonly] )+label, input[type=password]:focus:not
-	([readonly] )+label, input[type=email]:focus:not ([readonly] )+label,
+	 ([readonly] )+label, input[type=email]:focus:not ([readonly] )+label,
 	input[type=url]:focus:not ([readonly] )+label, input[type=time]:focus:not
-	([readonly] )+label, input[type=date]:focus:not ([readonly] )+label,
+	 ([readonly] )+label, input[type=date]:focus:not ([readonly] )+label,
 	input[type=datetime-local]:focus:not ([readonly] )+label, input[type=tel]:focus:not
-	([readonly] )+label, input[type=number]:focus:not ([readonly] )+label,
+	 ([readonly] )+label, input[type=number]:focus:not ([readonly] )+label,
 	input[type=search]:focus:not ([readonly] )+label, textarea.materialize-textarea:focus:not
-	([readonly] )+label {
+	 ([readonly] )+label {
 	color: #26a69a
 }
 
@@ -8466,7 +8809,7 @@ input[type=text]+label:after, input[type=password]+label:after, input[type=email
 }
 
 .input-field input[type=search]:focus+label i, .input-field input[type=search]:focus 
-	~ .mdi-navigation-close, .input-field input[type=search]:focus ~
+	 ~ .mdi-navigation-close, .input-field input[type=search]:focus ~
 	.material-icons {
 	color: #444
 }
@@ -8476,7 +8819,7 @@ input[type=text]+label:after, input[type=password]+label:after, input[type=email
 }
 
 .input-field input[type=search] ~ .mdi-navigation-close, .input-field input[type=search] 
-	~ .material-icons {
+	 ~ .material-icons {
 	position: absolute;
 	top: 0;
 	right: 1rem;
@@ -9407,31 +9750,64 @@ keyframes container-rotate {
 
 25%{
 -webkit-transform
+
+
 :rotate(270deg)
+
+
 }
 37
-.5 %{
-	-webkit-transform: rotate(405deg)
-}
+.5
+ 
+%{
+-webkit-transform
+:
+ 
+rotate
+(405deg)
 
+
+}
 50%{
 -webkit-transform
+
+
 :rotate(540deg)
+
+
 }
 62
-.5 %{
-	-webkit-transform: rotate(675deg)
-}
+.5
+ 
+%{
+-webkit-transform
+:
+ 
+rotate
+(675deg)
 
+
+}
 75%{
 -webkit-transform
+
+
 :rotate(810deg)
+
+
 }
 87
-.5 %{
-	-webkit-transform: rotate(945deg)
-}
+.5
+ 
+%{
+-webkit-transform
+:
+ 
+rotate
+(945deg)
 
+
+}
 to {
 	-webkit-transform: rotate(1080deg)
 }
@@ -9444,31 +9820,64 @@ keyframes fill-unfill-rotate { 12.5%{
 
 25%{
 transform
+
+
 :rotate(270deg)
+
+
 }
 37
-.5 %{
-	transform: rotate(405deg)
-}
+.5
+ 
+%{
+transform
+:
+ 
+rotate
+(405deg)
 
+
+}
 50%{
 transform
+
+
 :rotate(540deg)
+
+
 }
 62
-.5 %{
-	transform: rotate(675deg)
-}
+.5
+ 
+%{
+transform
+:
+ 
+rotate
+(675deg)
 
+
+}
 75%{
 transform
+
+
 :rotate(810deg)
+
+
 }
 87
-.5 %{
-	transform: rotate(945deg)
-}
+.5
+ 
+%{
+transform
+:
+ 
+rotate
+(945deg)
 
+
+}
 to {
 	transform: rotate(1080deg)
 }
@@ -9481,27 +9890,47 @@ to {
 
 25%{
 opacity
+
+
 :
+
+
 1
 }
 26%{
 opacity
+
+
 :
+
+
 0
 }
 89%{
 opacity
+
+
 :
+
+
 0
 }
 90%{
 opacity
+
+
 :
+
+
 1
 }
 100%{
 opacity
+
+
 :
+
+
 1
 }
 }
@@ -9512,27 +9941,47 @@ keyframes blue-fade-in-out {
 
 25%{
 opacity
+
+
 :
+
+
 1
 }
 26%{
 opacity
+
+
 :
+
+
 0
 }
 89%{
 opacity
+
+
 :
+
+
 0
 }
 90%{
 opacity
+
+
 :
+
+
 1
 }
 100%{
 opacity
+
+
 :
+
+
 1
 }
 }
@@ -9543,22 +9992,38 @@ opacity
 
 15%{
 opacity
+
+
 :
+
+
 0
 }
 25%{
 opacity
+
+
 :
+
+
 1
 }
 50%{
 opacity
+
+
 :
+
+
 1
 }
 51%{
 opacity
+
+
 :
+
+
 0
 }
 }
@@ -9569,22 +10034,38 @@ keyframes red-fade-in-out {
 
 15%{
 opacity
+
+
 :
+
+
 0
 }
 25%{
 opacity
+
+
 :
+
+
 1
 }
 50%{
 opacity
+
+
 :
+
+
 1
 }
 51%{
 opacity
+
+
 :
+
+
 0
 }
 }
@@ -9595,22 +10076,38 @@ opacity
 
 40%{
 opacity
+
+
 :
+
+
 0
 }
 50%{
 opacity
+
+
 :
+
+
 1
 }
 75%{
 opacity
+
+
 :
+
+
 1
 }
 76%{
 opacity
+
+
 :
+
+
 0
 }
 }
@@ -9621,22 +10118,38 @@ keyframes yellow-fade-in-out {
 
 40%{
 opacity
+
+
 :
+
+
 0
 }
 50%{
 opacity
+
+
 :
+
+
 1
 }
 75%{
 opacity
+
+
 :
+
+
 1
 }
 76%{
 opacity
+
+
 :
+
+
 0
 }
 }
@@ -9647,22 +10160,38 @@ opacity
 
 65%{
 opacity
+
+
 :
+
+
 0
 }
 75%{
 opacity
+
+
 :
+
+
 1
 }
 90%{
 opacity
+
+
 :
+
+
 1
 }
 100%{
 opacity
+
+
 :
+
+
 0
 }
 }
@@ -9673,22 +10202,38 @@ keyframes green-fade-in-out {
 
 65%{
 opacity
+
+
 :
+
+
 0
 }
 75%{
 opacity
+
+
 :
+
+
 1
 }
 90%{
 opacity
+
+
 :
+
+
 1
 }
 100%{
 opacity
+
+
 :
+
+
 0
 }
 }
@@ -9765,7 +10310,11 @@ opacity
 
 50%{
 -webkit-transform
+
+
 :rotate(-5deg)
+
+
 }
 to {
 	-webkit-transform: rotate(130deg)
@@ -9779,7 +10328,11 @@ keyframes left-spin {
 
 50%{
 transform
+
+
 :rotate(-5deg)
+
+
 }
 to {
 	transform: rotate(130deg)
@@ -9793,7 +10346,11 @@ to {
 
 50%{
 -webkit-transform
+
+
 :rotate(5deg)
+
+
 }
 to {
 	-webkit-transform: rotate(-130deg)
@@ -9807,7 +10364,11 @@ keyframes right-spin {
 
 50%{
 transform
+
+
 :rotate(5deg)
+
+
 }
 to {
 	transform: rotate(-130deg)
