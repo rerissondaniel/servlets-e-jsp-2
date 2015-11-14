@@ -43,9 +43,9 @@ public class SignUpServlet extends HttpServlet {
 			try {
 				if(administratorDaoImpl.searchByName(username) == null){
 					administratorDaoImpl.insert(admin);
-					request.getSession().setAttribute("alert", "Usuário Cadastrado com Sucesso");
+					request.setAttribute("error", "Usuï¿½rio Cadastrado com Sucesso");
 				}else{
-					request.getSession().setAttribute("alert", "Nome de Usuário já está em uso");
+					request.setAttribute("error", "Nome de Usuï¿½rio jï¿½ estï¿½ em uso");
 				}
 			
 			} catch (ClassNotFoundException | SQLException e) {

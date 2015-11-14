@@ -15,7 +15,6 @@
 	<% session.removeAttribute("username"); %>
 
 		<script language="javascript">
-			<%= session.getAttribute("alert") == null ? "" : "window.alert(\"" + ((String)session.getAttribute("alert")) + "\");" %>
 			<%= request.getAttribute("error") == null ? "" : "window.alert(\"" + ((String)request.getAttribute("error")) + "\");" %>
 		</script>
 

@@ -39,7 +39,7 @@ public class SearchServlet extends HttpServlet {
 				else
 					dispatcher = request.getRequestDispatcher("webapp/home-admin.jsp");
 				
-				request.setAttribute("alert", "Volume não encontrado");
+				request.setAttribute("error", "Volume nï¿½o encontrado");
 			
 			} else {
 				dispatcher = request.getRequestDispatcher("webapp/result.jsp");

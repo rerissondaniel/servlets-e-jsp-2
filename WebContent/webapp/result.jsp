@@ -30,7 +30,7 @@
 			<table class="bordered striped">
 				<tr>
 					<td class="bold">Título do Volume</td>
-					<td><%=((Volume) request.getAttribute("volume")).getTitle()%></td>
+					<td>${volume.getTitle()}</td>
 				</tr>
 
 				<tr>

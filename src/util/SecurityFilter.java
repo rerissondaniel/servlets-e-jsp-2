@@ -9,9 +9,11 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+@WebFilter(urlPatterns = {"/webapp/home-admin.jsp"})
 public class SecurityFilter implements Filter{
 
 	@Override
@@ -27,8 +29,8 @@ public class SecurityFilter implements Filter{
 		String admin = (String) session.getAttribute("username");
 		
 		if(admin == null){
-			request.setAttribute("error", "Você não está autorizado a visualizar esta página");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("webapp/index.jsp");
+			request.setAttribute("error", "Vocï¿½ nï¿½o estï¿½ autorizado a visualizar esta pï¿½gina");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
 			dispatcher.forward(request, response);
 			
 		}else{
